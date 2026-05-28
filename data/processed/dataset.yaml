@@ -1,0 +1,9 @@
+# Placeholder dataset config generated on Day1.
+# Real YOLO dataset config will be generated after MVTec AD conversion.
+path: data/processed/mvtec_yolo
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: defect
