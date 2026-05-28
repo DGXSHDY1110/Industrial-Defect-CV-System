@@ -1,0 +1,26 @@
+name: defect-cv
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - numpy
+      - pandas
+      - opencv-python
+      - pillow
+      - matplotlib
+      - pyyaml
+      - tqdm
+      - rich
+      - loguru
+      - pytest
+      - black
+      - isort
+      - streamlit
+      - torch
+      - torchvision
+      - ultralytics
+      - onnx
+      - onnxruntime

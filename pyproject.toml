@@ -1,0 +1,18 @@
+[project]
+name = "industrial-defect-cv-system"
+version = "0.1.0"
+description = "End-to-end industrial defect detection system with YOLOv8, ResNet, Grad-CAM, ONNX and Streamlit."
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

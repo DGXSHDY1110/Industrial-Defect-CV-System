@@ -1,0 +1,13 @@
+dataset_name: mvtec_ad_subset
+raw_dir: data/raw/mvtec_ad
+processed_dir: data/processed/mvtec_yolo
+categories:
+  - bottle
+  - capsule
+  - metal_nut
+task: defect_detection
+label_mode: binary_defect
+train_ratio: 0.8
+val_ratio: 0.1
+test_ratio: 0.1
+seed: 42

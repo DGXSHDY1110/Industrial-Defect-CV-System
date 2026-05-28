@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/images/.gitkeep
+!data/processed/labels/.gitkeep
+!data/processed/dataset.yaml
+!data/samples/normal/.gitkeep
+!data/samples/defect/.gitkeep
+
+# Outputs
+outputs/checkpoints/*
+outputs/logs/*
+outputs/reports/*
+outputs/predictions/*
+outputs/exported/*
+!outputs/checkpoints/.gitkeep
+!outputs/logs/.gitkeep
+!outputs/reports/.gitkeep
+!outputs/predictions/.gitkeep
+!outputs/exported/.gitkeep
+
+# Model artifacts
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+*.ckpt
+
+# Logs
+*.log
+runs/
+wandb/
+mlruns/
+
+# Temporary
+tmp/
+temp/
+.cache/

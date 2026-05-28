@@ -1,0 +1,5 @@
+model_name: yolov8n
+weights: yolov8n.pt
+task: detect
+num_classes: 1
+input_size: 768

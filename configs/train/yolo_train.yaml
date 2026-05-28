@@ -1,0 +1,13 @@
+model: yolov8n.pt
+data: configs/dataset/yolo_mvtec.yaml
+imgsz: 768
+epochs: 50
+batch: 8
+optimizer: AdamW
+lr0: 0.001
+weight_decay: 0.0005
+patience: 15
+cos_lr: true
+workers: 4
+seed: 42
+project: outputs/checkpoints/yolo
