@@ -1,64 +1,62 @@
 # Python
 __pycache__/
 *.py[cod]
-*.so
+*.pyo
+*.pyd
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
 
-# Environments
+# Environment
 .env
 .venv/
 venv/
-env/
-*.env
+*.log
 
 # IDE
 .vscode/
 .idea/
-
-# OS
 .DS_Store
 
-# Data
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/images/.gitkeep
-!data/processed/labels/.gitkeep
+# Cline / temporary
+_archive/
+.cline/
+*.tmp
+
+# Dataset - do not upload raw or processed images
+data/raw/
+data/processed/images/
+data/processed/labels/
+data/processed/**/images/
+data/processed/**/labels/
+
+# Keep lightweight dataset config if needed
+!data/processed/
 !data/processed/dataset.yaml
-!data/samples/normal/.gitkeep
-!data/samples/defect/.gitkeep
+!data/processed/.gitkeep
 
-# Outputs
-outputs/checkpoints/*
-outputs/logs/*
-outputs/reports/*
-outputs/predictions/*
-outputs/exported/*
-!outputs/checkpoints/.gitkeep
-!outputs/logs/.gitkeep
-!outputs/reports/.gitkeep
-!outputs/predictions/.gitkeep
-!outputs/exported/.gitkeep
-
-# Model artifacts
+# Model checkpoints and exported models
+outputs/checkpoints/
+outputs/logs/
+outputs/exported/
 *.pt
 *.pth
 *.onnx
 *.engine
-*.trt
-*.weights
-*.ckpt
+*.tflite
+*.torchscript
 
-# Logs
-*.log
+# Ultralytics default output
 runs/
-wandb/
-mlruns/
 
-# Temporary
-tmp/
-temp/
-.cache/
+# Large visual case images from datasets
+outputs/reports/yolo/cases/
+
+# Keep lightweight reports, metrics, and curves
+!outputs/
+!outputs/reports/
+!outputs/reports/yolo/
+!outputs/reports/yolo/*.md
+!outputs/reports/yolo/*.json
+!outputs/reports/yolo/*.csv
+!outputs/reports/yolo/*.png

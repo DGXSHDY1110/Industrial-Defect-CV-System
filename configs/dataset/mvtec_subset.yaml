@@ -1,13 +1,23 @@
 dataset_name: mvtec_ad_subset
-raw_dir: data/raw/mvtec_ad
-processed_dir: data/processed/mvtec_yolo
+raw_root: data/raw/mvtec_ad
+processed_root: data/processed/mvtec_yolo
+
 categories:
   - bottle
   - capsule
   - metal_nut
-task: defect_detection
-label_mode: binary_defect
-train_ratio: 0.8
-val_ratio: 0.1
-test_ratio: 0.1
-seed: 42
+
+expected_structure:
+  train_dir: train
+  test_dir: test
+  ground_truth_dir: ground_truth
+
+task:
+  detection: true
+  classification: true
+  explainability: true
+
+notes:
+  - MVTec AD is originally designed for anomaly detection.
+  - This project converts pixel-level anomaly masks into YOLO-style bounding boxes for supervised defect detection demo.
+  - The dataset itself should not be committed to GitHub.
